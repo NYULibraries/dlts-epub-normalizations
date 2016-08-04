@@ -12,7 +12,6 @@ The normalizations:
     Motivation: have every single page in our books display in the default view of our
     current version of ReadiumJS viewer.  Sometimes the cover spine item has `linear="no"`
     attribute, which prevents it from loading when user first opens the book.
-* Directory structure: change `OEBPS/` directory to `ops/` to make uniform for processing purposes.
 
 ## Getting Started
 

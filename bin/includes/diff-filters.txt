@@ -1,0 +1,3 @@
+^---|^\+\+\+
+<\?xml version="\d\.\d"\?>
+^-.*<itemref .*linear="no".*/>|^\+.*<itemref .*idref=".*cover.*".*/>|^\+.*<itemref .*idref=".*cov01.*".*/>

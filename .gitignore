@@ -1,0 +1,8 @@
+.idea/
+*~
+logs/
+tmp/*
+# Ignore .git subdirectory
+tmp/.*
+!tmp/.commit-empty-directory
+

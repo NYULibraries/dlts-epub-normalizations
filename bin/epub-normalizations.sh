@@ -106,8 +106,6 @@ do
     process_dir=${TMP}/${epub_name}
 
     remove-linear-no-and-fix-xml-version $process_dir
-
-    rename-epub-content-directories $process_dir
 done
 
 # Verify changes.  This is not foolproof, but it is a decent check.
@@ -116,8 +114,7 @@ DIFF_FILTERS_FILE=$INCLUDES_DIR/diff-filters.txt
 GIT_DIFF_FILE=$TMP/git-diff.txt
 cd $TMP
 git add .
-# Similarity of 95% seems to be a good threshold.
-git diff --cached -M95% > $GIT_DIFF_FILE
+git diff > $GIT_DIFF_FILE
 git_diff_after_filtering_out_normalizations=$( egrep '^-|^\+' $GIT_DIFF_FILE | egrep -v -f $DIFF_FILTERS_FILE )
 
 if [ -z $git_diff_after_filtering_out_normalizations ]
